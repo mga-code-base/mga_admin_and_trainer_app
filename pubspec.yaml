@@ -1,0 +1,33 @@
+name: mga_admin_and_trainer_app
+description: "Admin & Trainer App"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.2.0
+  cupertino_icons: ^1.0.8
+  http: ^1.2.0
+  flutter_secure_storage: ^9.2.2
+  image_picker: ^1.0.7
+  stomp_dart_client: ^3.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: false
+  image_path: "assets/icon/mga_ad_n_tr.png"
+  adaptive_icon_background: "#121212"
+  adaptive_icon_foreground: "assets/icon/mga_ad_n_tr.png"
