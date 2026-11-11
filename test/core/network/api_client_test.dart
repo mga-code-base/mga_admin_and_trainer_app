@@ -24,7 +24,7 @@ void main() {
       await client.get('/admins/inactiveadmins', auth: false);
 
       expect(captured.method, 'GET');
-      expect(captured.url.toString(), 'https://api.06071995.xyz/api/admins/inactiveadmins');
+      expect(captured.url.toString(), 'https://api.06071995.xyz/api/v1/admins/inactiveadmins');
       expect(captured.headers['Content-Type'], 'application/json');
       expect(captured.headers.containsKey('Authorization'), isFalse);
     });
@@ -33,7 +33,7 @@ void main() {
       client = buildClient(http.Response('{}', 200));
       await client.get('/members', query: {'id': '55'}, auth: false);
 
-      expect(captured.url.path, '/api/members');
+      expect(captured.url.path, '/api/v1/members');
       expect(captured.url.queryParameters['id'], '55');
     });
 
@@ -65,7 +65,7 @@ void main() {
       await client.delete('/trainers/77', auth: false);
 
       expect(captured.method, 'DELETE');
-      expect(captured.url.path, '/api/trainers/77');
+      expect(captured.url.path, '/api/v1/trainers/77');
     });
 
     test('the raw http.Response (status code and body) is returned untouched', () async {
